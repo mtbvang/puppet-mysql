@@ -16,7 +16,8 @@ class mysql::config
       owner   => mysql,
       group   => mysql,
       mode    => 755;
-    "/etc/mysql/my.cnf":
+
+    /*"/etc/mysql/my.cnf":
       ensure  => present,
       owner   => root,
       group   => root,
@@ -24,7 +25,8 @@ class mysql::config
       source  => [ "puppet:///modules/mysql/my.cnf-${mysql::type}" ],
       # we only install a config file if the package doesn't install one
       replace => false,
-      notify  => $service_class;
+      notify  => $service_class;*/
+
     "/etc/mysql/debian.cnf":
       ensure  => present,
       owner   => root,
@@ -42,7 +44,7 @@ class mysql::config
         ],
       require => File['/etc/mysql/my.cnf']
     }
-  
+
     if($mysql::notify_services)
     {
       if($mysql::multi)
