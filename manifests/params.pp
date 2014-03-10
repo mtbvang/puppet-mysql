@@ -1,7 +1,7 @@
 class mysql::params
 {
   $packages = $mysql::type ? {
-    'oracle'  => [ 'mysql-server-5.5' ],
+    'oracle'  => [ 'mysql-server' ],
     'percona' => [ 'percona-server-server-5.6' ],
     'mariadb' => [ 'mariadb-server-5.5' ],
   }
