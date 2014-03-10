@@ -37,7 +37,7 @@ class mysql::repo
         release     => $::lsbdistcodename,
         repos       => 'main',
         notify      => Exec['mysql::repo::apt-get update'],
-        require     => Apt::Key['CD2EFD2A'],
+        require     => Apt::Key['1BB943DB'],
       }
     }
   }
