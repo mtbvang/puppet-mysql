@@ -35,7 +35,7 @@ class mysql::repo
         location    => 'http://mirrors.coreix.net/mariadb/repo/5.5/ubuntu',
         release     => $::lsbdistcodename,
         repos       => 'main',
-        notify      => Exec['mysql::repo::apt-get update'],
+        require     => Apt::Key['1BB943DB'],
       }
     }
   }
