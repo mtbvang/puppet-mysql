@@ -8,7 +8,7 @@
 #
 # Actions:
 #
-# Requires: camptocamp/apt rgevaert/pwgen
+# Requires: puppetlabs/apt
 #
 # Sample Usage:
 # class {

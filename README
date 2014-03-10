@@ -1,11 +1,13 @@
 This module manages MySQL.  It gives you the choice MySQL
 server you want to use: Oracle, MariaDB or Percona
 
+Only tested on (and probably only works on) Ubuntu
+
 Parameters, first one is the default:
 - type : oracle|mariadb|percona
 - multi: false|true
 
-Requires: camptocamp/apt rgevaert/pwgen
+Requires: puppetlabs/apt
 
 Sample Usages:
 
@@ -41,7 +43,7 @@ Sample Usages:
       ensure       => 'stopped';
   }
 
-3) Change a setting in your MySQL configuration.  
+3) Change a setting in your MySQL configuration.
 
   mysql::config::param {
     'bind-address':

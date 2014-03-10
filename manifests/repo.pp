@@ -28,11 +28,14 @@ class mysql::repo
       }
 
       # Puppetlabs/apt module
-      # Sorry, ubuntu only
+
       apt::source { 'mariadb5.5':
         ensure      => present,
         include_src => true,
-        location    => 'http://mirrors.coreix.net/mariadb/repo/5.5/ubuntu',
+
+        # 华中科技大学启明学院 - Qiming College of Huazhong UST mirror (China)
+        location    => 'http://mirrors.hustunique.com/mariadb/repo/5.5/ubuntu',
+
         release     => $::lsbdistcodename,
         repos       => 'main',
         require     => Apt::Key['1BB943DB'],
