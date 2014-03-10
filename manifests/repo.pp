@@ -18,7 +18,6 @@ class mysql::repo
         location    => 'http://repo.percona.com/apt',
         release     => $::lsbdistcodename,
         repos       => 'main',
-        notify      => Exec['mysql::repo::apt-get update'],
         require     => Apt::Key['CD2EFD2A'],
       }
     }
@@ -37,15 +36,8 @@ class mysql::repo
         release     => $::lsbdistcodename,
         repos       => 'main',
         notify      => Exec['mysql::repo::apt-get update'],
-        require     => Apt::Key['1BB943DB'],
       }
     }
-  }
-
-  exec { 'mysql::repo::apt-get update':
-    command     => 'apt-get update',
-    path        => '/usr/bin',
-    refreshonly => true,
   }
 
 }
