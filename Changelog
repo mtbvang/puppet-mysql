@@ -1,3 +1,9 @@
+2.0.0
+-----
+* Dependency is now puppetlabs/apt insted of camptocamp/apt (tests haven't been updated though)
+* Oracle, Percona and MariaDB version updates
+* Removed secure installation scripts which was never executed
+
 1.0.0
 -----
 

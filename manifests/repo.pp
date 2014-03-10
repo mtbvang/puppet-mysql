@@ -34,7 +34,10 @@ class mysql::repo
         include_src => true,
 
         # 华中科技大学启明学院 - Qiming College of Huazhong UST mirror (China)
-        location    => 'http://mirrors.hustunique.com/mariadb/repo/5.5/ubuntu',
+        #location    => 'http://mirrors.hustunique.com/mariadb/repo/5.5/ubuntu',
+
+        # Syringa Networks (US)
+        location      => 'http://mirrors.syringanetworks.net/mariadb/repo/5.5/ubuntu',
 
         release     => $::lsbdistcodename,
         repos       => 'main',
