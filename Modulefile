@@ -1,6 +1,6 @@
 name    'rgevaert-mysql'
 version '2.0.0'
-source 'https://github.com/antriver/puppet-mysql'
+source 'https://github.com/DanieleSalatti/puppet-mysql'
 author 'rgevaert'
 license 'GPL v3 or later'
 summary 'Manage your percona, mariadb or oracle MySQL'
